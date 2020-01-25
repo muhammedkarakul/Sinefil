@@ -1,0 +1,484 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5721E63223DC729E00654197 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721E63123DC729E00654197 /* AppDelegate.swift */; };
+		5721E63623DC729E00654197 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721E63523DC729E00654197 /* InitialViewController.swift */; };
+		5721E63B23DC72A000654197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5721E63A23DC72A000654197 /* Assets.xcassets */; };
+		5721E63E23DC72A000654197 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5721E63C23DC72A000654197 /* LaunchScreen.storyboard */; };
+		5721E64C23DC750A00654197 /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721E64B23DC750A00654197 /* InitialView.swift */; };
+		5721E65123DC756800654197 /* SFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721E65023DC756800654197 /* SFViewController.swift */; };
+		5721E65323DC76D400654197 /* SFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721E65223DC76D400654197 /* SFView.swift */; };
+		9EB41809BF92C37411D7FF25 /* Pods_Sinefil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B9B0B21EDBEDE317A33BC1E /* Pods_Sinefil.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3D704B5B68C6283E6FD9A598 /* Pods-Sinefil.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sinefil.debug.xcconfig"; path = "Target Support Files/Pods-Sinefil/Pods-Sinefil.debug.xcconfig"; sourceTree = "<group>"; };
+		5721E62E23DC729E00654197 /* Sinefil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sinefil.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5721E63123DC729E00654197 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5721E63523DC729E00654197 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		5721E63A23DC72A000654197 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5721E63D23DC72A000654197 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5721E63F23DC72A000654197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5721E64B23DC750A00654197 /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
+		5721E65023DC756800654197 /* SFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFViewController.swift; sourceTree = "<group>"; };
+		5721E65223DC76D400654197 /* SFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFView.swift; sourceTree = "<group>"; };
+		9B9B0B21EDBEDE317A33BC1E /* Pods_Sinefil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sinefil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC74BB6494A91EA127F47033 /* Pods-Sinefil.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sinefil.release.xcconfig"; path = "Target Support Files/Pods-Sinefil/Pods-Sinefil.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5721E62B23DC729E00654197 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EB41809BF92C37411D7FF25 /* Pods_Sinefil.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4CEED4364D95B02372AC20BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3D704B5B68C6283E6FD9A598 /* Pods-Sinefil.debug.xcconfig */,
+				CC74BB6494A91EA127F47033 /* Pods-Sinefil.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5721E62523DC729E00654197 = {
+			isa = PBXGroup;
+			children = (
+				5721E63023DC729E00654197 /* Sinefil */,
+				5721E62F23DC729E00654197 /* Products */,
+				4CEED4364D95B02372AC20BB /* Pods */,
+				7562EBCE2DD8AA3D215370A3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5721E62F23DC729E00654197 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5721E62E23DC729E00654197 /* Sinefil.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5721E63023DC729E00654197 /* Sinefil */ = {
+			isa = PBXGroup;
+			children = (
+				5721E64823DC72E500654197 /* SupportFiles */,
+				5721E64723DC72DC00654197 /* Models */,
+				5721E64623DC72D700654197 /* Controllers */,
+				5721E64523DC72D200654197 /* Views */,
+			);
+			path = Sinefil;
+			sourceTree = "<group>";
+		};
+		5721E64523DC72D200654197 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5721E64623DC72D700654197 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5721E64923DC739700654197 /* Initial */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5721E64723DC72DC00654197 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5721E64F23DC754200654197 /* BussinesLogic */,
+				5721E64E23DC753E00654197 /* Views */,
+				5721E64D23DC752900654197 /* Controllers */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5721E64823DC72E500654197 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				5721E63123DC729E00654197 /* AppDelegate.swift */,
+				5721E63A23DC72A000654197 /* Assets.xcassets */,
+				5721E63C23DC72A000654197 /* LaunchScreen.storyboard */,
+				5721E63F23DC72A000654197 /* Info.plist */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		5721E64923DC739700654197 /* Initial */ = {
+			isa = PBXGroup;
+			children = (
+				5721E64A23DC74FB00654197 /* View */,
+				5721E63523DC729E00654197 /* InitialViewController.swift */,
+			);
+			path = Initial;
+			sourceTree = "<group>";
+		};
+		5721E64A23DC74FB00654197 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5721E64B23DC750A00654197 /* InitialView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5721E64D23DC752900654197 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5721E65023DC756800654197 /* SFViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5721E64E23DC753E00654197 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5721E65223DC76D400654197 /* SFView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5721E64F23DC754200654197 /* BussinesLogic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BussinesLogic;
+			sourceTree = "<group>";
+		};
+		7562EBCE2DD8AA3D215370A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B9B0B21EDBEDE317A33BC1E /* Pods_Sinefil.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5721E62D23DC729E00654197 /* Sinefil */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5721E64223DC72A000654197 /* Build configuration list for PBXNativeTarget "Sinefil" */;
+			buildPhases = (
+				D920AF13949881C699630874 /* [CP] Check Pods Manifest.lock */,
+				5721E62A23DC729E00654197 /* Sources */,
+				5721E62B23DC729E00654197 /* Frameworks */,
+				5721E62C23DC729E00654197 /* Resources */,
+				19D74FF2082BFDA950D3D7E3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sinefil;
+			productName = Sinefil;
+			productReference = 5721E62E23DC729E00654197 /* Sinefil.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5721E62623DC729E00654197 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Muhammed KARAKUL";
+				TargetAttributes = {
+					5721E62D23DC729E00654197 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 5721E62923DC729E00654197 /* Build configuration list for PBXProject "Sinefil" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5721E62523DC729E00654197;
+			productRefGroup = 5721E62F23DC729E00654197 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5721E62D23DC729E00654197 /* Sinefil */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5721E62C23DC729E00654197 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5721E63E23DC72A000654197 /* LaunchScreen.storyboard in Resources */,
+				5721E63B23DC72A000654197 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19D74FF2082BFDA950D3D7E3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sinefil/Pods-Sinefil-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sinefil/Pods-Sinefil-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sinefil/Pods-Sinefil-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D920AF13949881C699630874 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sinefil-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5721E62A23DC729E00654197 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5721E64C23DC750A00654197 /* InitialView.swift in Sources */,
+				5721E65123DC756800654197 /* SFViewController.swift in Sources */,
+				5721E63623DC729E00654197 /* InitialViewController.swift in Sources */,
+				5721E65323DC76D400654197 /* SFView.swift in Sources */,
+				5721E63223DC729E00654197 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5721E63C23DC72A000654197 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5721E63D23DC72A000654197 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5721E64023DC72A000654197 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5721E64123DC72A000654197 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5721E64323DC72A000654197 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D704B5B68C6283E6FD9A598 /* Pods-Sinefil.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6ALBRJZ4KA;
+				INFOPLIST_FILE = "$(SRCROOT)/Sinefil/SupportFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.muhammedkarakul.Sinefil;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		5721E64423DC72A000654197 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC74BB6494A91EA127F47033 /* Pods-Sinefil.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6ALBRJZ4KA;
+				INFOPLIST_FILE = "$(SRCROOT)/Sinefil/SupportFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.muhammedkarakul.Sinefil;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5721E62923DC729E00654197 /* Build configuration list for PBXProject "Sinefil" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5721E64023DC72A000654197 /* Debug */,
+				5721E64123DC72A000654197 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5721E64223DC72A000654197 /* Build configuration list for PBXNativeTarget "Sinefil" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5721E64323DC72A000654197 /* Debug */,
+				5721E64423DC72A000654197 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5721E62623DC729E00654197 /* Project object */;
+}
