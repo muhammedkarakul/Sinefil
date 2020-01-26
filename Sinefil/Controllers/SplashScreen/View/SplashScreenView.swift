@@ -12,7 +12,6 @@ final class SplashScreenView: SFView {
     
     private(set) lazy var welcomeLabel: UILabel = {
         let label = UILabel()
-        label.text = "Loodos"
         label.font = Font.QuickSand.SemiBold.title
         return label
     }()
