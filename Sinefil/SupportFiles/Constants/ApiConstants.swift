@@ -9,6 +9,7 @@
 import Foundation
 
 struct ApiConstants {
-    //http://www.omdbapi.com/?apikey=28d088d4&t=the+godfather
-    static internal var baseURL = "http://www.omdbapi.com/?apikey=28d088d4&"
+    // Search movie with name example -> http://www.omdbapi.com/?apikey=12345678&t=the+godfather
+    static internal var apiKey = "" // Your api key
+    static internal var baseURL = "http://www.omdbapi.com/?apikey=\(apiKey)&"
 }
