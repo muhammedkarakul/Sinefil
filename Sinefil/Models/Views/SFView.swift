@@ -24,20 +24,22 @@ class SFView: UIView {
      Make apprearance changes here
      */
     internal func configureApperance() {
-        
+        if #available(iOS 13.0, *) {
+            backgroundColor = .systemBackground
+        } else {
+            backgroundColor = .white
+        }
     }
     
     /**
      Prepare layout here
      */
     internal func prepareLayout() {
-        
     }
     
     /**
      Define link interactions here
      */
     internal func linkInteractor() {
-        
     }
 }
