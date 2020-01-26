@@ -10,4 +10,7 @@ target 'Sinefil' do
 
   # Pods for Sinefil
   pod 'SnapKit'
+  pod 'Firebase'
+  pod 'Firebase/RemoteConfig'
+  pod 'Alamofire'
 end
