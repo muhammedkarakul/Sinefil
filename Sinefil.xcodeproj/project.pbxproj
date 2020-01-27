@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		571EF54823DF2FCF006E678A /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571EF54723DF2FCF006E678A /* Movie.swift */; };
 		5721E63223DC729E00654197 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721E63123DC729E00654197 /* AppDelegate.swift */; };
 		5721E63623DC729E00654197 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721E63523DC729E00654197 /* SplashScreenViewController.swift */; };
 		5721E63B23DC72A000654197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5721E63A23DC72A000654197 /* Assets.xcassets */; };
@@ -29,7 +30,6 @@
 		5741F8EE23DCC66C00DAA13A /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5741F8ED23DCC66C00DAA13A /* RemoteConfigDefaults.plist */; };
 		577FD91023DE6FF2000A46B2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 577FD91223DE6FF2000A46B2 /* Localizable.strings */; };
 		577FD91823DE7F46000A46B2 /* Private-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 577FD91723DE7F46000A46B2 /* Private-Info.plist */; };
-		577FD91A23DEF543000A46B2 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577FD91923DEF543000A46B2 /* Movie.swift */; };
 		577FD92123DEFD4A000A46B2 /* SFTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577FD92023DEFD4A000A46B2 /* SFTableViewController.swift */; };
 		577FD92423DF0327000A46B2 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577FD92323DF0327000A46B2 /* BackgroundView.swift */; };
 		9EB41809BF92C37411D7FF25 /* Pods_Sinefil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B9B0B21EDBEDE317A33BC1E /* Pods_Sinefil.framework */; };
@@ -37,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		3D704B5B68C6283E6FD9A598 /* Pods-Sinefil.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sinefil.debug.xcconfig"; path = "Target Support Files/Pods-Sinefil/Pods-Sinefil.debug.xcconfig"; sourceTree = "<group>"; };
+		571EF54723DF2FCF006E678A /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		5721E62E23DC729E00654197 /* Sinefil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sinefil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5721E63123DC729E00654197 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5721E63523DC729E00654197 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
@@ -63,7 +64,6 @@
 		577FD91323DE7037000A46B2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		577FD91423DE7037000A46B2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		577FD91723DE7F46000A46B2 /* Private-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Private-Info.plist"; sourceTree = "<group>"; };
-		577FD91923DEF543000A46B2 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Movie.swift; path = Sinefil/SupportFiles/PropertyLists/Movie.swift; sourceTree = SOURCE_ROOT; };
 		577FD92023DEFD4A000A46B2 /* SFTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFTableViewController.swift; sourceTree = "<group>"; };
 		577FD92323DF0327000A46B2 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		9B9B0B21EDBEDE317A33BC1E /* Pods_Sinefil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sinefil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +89,14 @@
 				CC74BB6494A91EA127F47033 /* Pods-Sinefil.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		571EF54623DF2FC5006E678A /* BussinesLogic */ = {
+			isa = PBXGroup;
+			children = (
+				571EF54723DF2FCF006E678A /* Movie.swift */,
+			);
+			path = BussinesLogic;
 			sourceTree = "<group>";
 		};
 		5721E62523DC729E00654197 = {
@@ -139,7 +147,7 @@
 		5721E64723DC72DC00654197 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5721E64F23DC754200654197 /* BussinesLogic */,
+				571EF54623DF2FC5006E678A /* BussinesLogic */,
 				5721E64E23DC753E00654197 /* Views */,
 				5721E64D23DC752900654197 /* Controllers */,
 			);
@@ -193,14 +201,6 @@
 				5721E65223DC76D400654197 /* SFView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		5721E64F23DC754200654197 /* BussinesLogic */ = {
-			isa = PBXGroup;
-			children = (
-				577FD91923DEF543000A46B2 /* Movie.swift */,
-			);
-			path = BussinesLogic;
 			sourceTree = "<group>";
 		};
 		5721E65423DC818B00654197 /* Delegates */ = {
@@ -434,9 +434,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				571EF54823DF2FCF006E678A /* Movie.swift in Sources */,
 				5721E66423DCA28D00654197 /* LayoutConstants.swift in Sources */,
 				5741F8E823DCB99F00DAA13A /* MainTableViewController.swift in Sources */,
-				577FD91A23DEF543000A46B2 /* Movie.swift in Sources */,
 				5721E64C23DC750A00654197 /* SplashScreenView.swift in Sources */,
 				5721E65123DC756800654197 /* SFViewController.swift in Sources */,
 				5721E65E23DC86A300654197 /* Utilities.swift in Sources */,
