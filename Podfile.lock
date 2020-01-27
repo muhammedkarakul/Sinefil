@@ -81,11 +81,13 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (6.5.0):
     - GoogleUtilities/Logger
+  - Kingfisher (4.10.1)
   - nanopb (0.3.9011):
     - nanopb/decode (= 0.3.9011)
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
+  - ProgressHUD (2.51)
   - PromisesObjC (1.2.8)
   - Protobuf (3.11.2)
   - SnapKit (4.2.0)
@@ -94,6 +96,8 @@ DEPENDENCIES:
   - Alamofire
   - Firebase
   - Firebase/RemoteConfig
+  - Kingfisher
+  - ProgressHUD
   - SnapKit
 
 SPEC REPOS:
@@ -113,7 +117,9 @@ SPEC REPOS:
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
     - GoogleUtilities
+    - Kingfisher
     - nanopb
+    - ProgressHUD
     - PromisesObjC
     - Protobuf
     - SnapKit
@@ -134,11 +140,13 @@ SPEC CHECKSUMS:
   GoogleDataTransport: 574a983e829327d7c18f2627f65d9e80164ea8a4
   GoogleDataTransportCCTSupport: cad3cd6cdbdbad6b5c2c9206ec413402755faaaa
   GoogleUtilities: f8de7ddf8c706f58e9b405d53e38bbdaa2731e5a
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
+  ProgressHUD: 54b4c2fa202bf3da7dddc1c698ae4e6376333bd9
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   Protobuf: dd1aaea7140debfe4dd0683fb8ef208e527ae153
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
-PODFILE CHECKSUM: 3bcafd8db8b49438a042a81832da433af9626e02
+PODFILE CHECKSUM: 6f3c0c257351270831ab8928813e20457fd85ca7
 
 COCOAPODS: 1.8.4

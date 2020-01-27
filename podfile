@@ -13,4 +13,6 @@ target 'Sinefil' do
   pod 'Firebase'
   pod 'Firebase/RemoteConfig'
   pod 'Alamofire'
+  pod 'Kingfisher'
+  pod 'ProgressHUD'
 end

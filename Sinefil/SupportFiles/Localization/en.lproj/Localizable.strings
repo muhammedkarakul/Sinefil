@@ -8,3 +8,5 @@
 
 // MARK: - MainTableViewController
 "search_bar_placeholder" = "Search movie";
+"background_view_search_movie" = "Search a movie.";
+"background_view_no_movie_found" = "No movie found!";
