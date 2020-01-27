@@ -12,11 +12,10 @@ class SFTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configureApperance()
+        registerTableViewCell()
         prepareLayout()
         linkInteractor()
-        cellRegister()
     }
     
     /**
@@ -24,13 +23,13 @@ class SFTableViewController: UITableViewController {
      */
     internal func configureApperance() {
     }
-
+    
     /**
      Prepare layout here
      */
     internal func prepareLayout() {
     }
-
+    
     /**
      Define link interactions here
      */
@@ -38,11 +37,11 @@ class SFTableViewController: UITableViewController {
     }
     
     /**
-     Register cells here
+     Register table view cells here
      */
-    internal func cellRegister() {
+    internal func registerTableViewCell() {
     }
-    
+
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {

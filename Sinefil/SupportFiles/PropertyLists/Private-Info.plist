@@ -4,5 +4,7 @@
 <dict>
 	<key>ApiKey</key>
 	<string>28d088d4</string>
+	<key>BaseURL</key>
+	<string>http://www.omdbapi.com</string>
 </dict>
 </plist>
