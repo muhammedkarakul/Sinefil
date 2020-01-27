@@ -90,7 +90,7 @@ fastlane/test_output
 iOSInjectionProject/
 
 # Private info property list
-Sinefil/Sinefil/SupportFiles/PropertyLists/Private-Info.plist
+Sinefil/SupportFiles/PropertyLists/Private-Info.plist
 
 # Google service info property list
-Sinefil/Sinefil/SupportFiles/PropertyLists/GoogleService-Info.plist
+Sinefil/SupportFiles/PropertyLists/GoogleService-Info.plist
