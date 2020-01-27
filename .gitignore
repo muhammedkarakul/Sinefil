@@ -88,3 +88,9 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+
+# Private info property list
+Sinefil/Sinefil/SupportFiles/PropertyLists/Private-Info.plist
+
+# Google service info property list
+Sinefil/Sinefil/SupportFiles/PropertyLists/GoogleService-Info.plist
