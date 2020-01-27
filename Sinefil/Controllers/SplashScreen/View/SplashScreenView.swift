@@ -16,12 +16,24 @@ final class SplashScreenView: SFView {
         return label
     }()
     
+    private lazy var loadingActivityIndicatorView: UIActivityIndicatorView = {
+        let activityIndicatorView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
+        activityIndicatorView.startAnimating()
+        return activityIndicatorView
+    }()
+    
     override func prepareLayout() {
         super.prepareLayout()
         
         addSubview(welcomeLabel)
         welcomeLabel.snp.makeConstraints { maker in
             maker.center.equalToSuperview()
+        }
+        
+        addSubview(loadingActivityIndicatorView)
+        loadingActivityIndicatorView.snp.makeConstraints { maker in
+            maker.centerX.equalToSuperview()
+            maker.top.equalTo(welcomeLabel.snp.bottom).offset(32.0)
         }
     }
 }
