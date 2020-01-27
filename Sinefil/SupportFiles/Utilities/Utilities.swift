@@ -20,4 +20,12 @@ final class Utilities {
             completion(true)
         }
     }
+    
+    internal class func readDataFromPlist(_ name: String) -> NSDictionary? {
+        var nsDictionary: NSDictionary?
+        if let path = Bundle.main.path(forResource: name, ofType: "plist") {
+           nsDictionary = NSDictionary(contentsOfFile: path)
+        }
+        return nsDictionary
+    }
 }

@@ -30,6 +30,11 @@ final class SplashScreenViewController: SFViewController {
         checkInternetConnection()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
     override func configureApperance() {
         super.configureApperance()
         view = splashScreenView
