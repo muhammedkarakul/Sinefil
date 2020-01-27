@@ -6,11 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Quicksand-SemiBold.ttf">
-            <string>Quicksand-SemiBold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -24,17 +19,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loodos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAZ-HC-501">
-                                <rect key="frame" x="151" y="428" width="112" height="40"/>
-                                <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="32"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="aYh-m0-NIt">
+                                <rect key="frame" x="87" y="328" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="kgJ-hh-BrU"/>
+                                    <constraint firstAttribute="width" constant="240" id="r9P-za-nZy"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="JAZ-HC-501" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="XcA-40-X3S"/>
-                            <constraint firstItem="JAZ-HC-501" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="qjE-vF-7Sd"/>
+                            <constraint firstItem="aYh-m0-NIt" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="HXv-ZH-50z"/>
+                            <constraint firstItem="aYh-m0-NIt" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="X18-qD-ZLX"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -43,4 +39,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Icon" width="512" height="512"/>
+    </resources>
 </document>

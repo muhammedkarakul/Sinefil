@@ -49,7 +49,7 @@ final class SplashScreenViewController: SFViewController {
         do {
             sleep(3)
         }
-        let mainViewController = MainViewController()
+        let mainViewController = MainTableViewController()
         self.navigationController?.pushViewController(mainViewController, animated: true)
     }
     

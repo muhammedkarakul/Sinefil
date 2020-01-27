@@ -25,8 +25,7 @@
 		5721E67123DCA70400654197 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5721E66A23DCA6F000654197 /* Quicksand-Regular.ttf */; };
 		5721E67223DCA70400654197 /* Quicksand-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5721E66923DCA6F000654197 /* Quicksand-SemiBold.ttf */; };
 		5721E67423DCA7CA00654197 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721E67323DCA7CA00654197 /* Font.swift */; };
-		5741F8E823DCB99F00DAA13A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5741F8E723DCB99F00DAA13A /* MainViewController.swift */; };
-		5741F8EB23DCB9D100DAA13A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5741F8EA23DCB9D100DAA13A /* MainView.swift */; };
+		5741F8E823DCB99F00DAA13A /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5741F8E723DCB99F00DAA13A /* MainTableViewController.swift */; };
 		5741F8EE23DCC66C00DAA13A /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5741F8ED23DCC66C00DAA13A /* RemoteConfigDefaults.plist */; };
 		577FD91023DE6FF2000A46B2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 577FD91223DE6FF2000A46B2 /* Localizable.strings */; };
 		9EB41809BF92C37411D7FF25 /* Pods_Sinefil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B9B0B21EDBEDE317A33BC1E /* Pods_Sinefil.framework */; };
@@ -54,8 +53,7 @@
 		5721E66B23DCA6F000654197 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
 		5721E66C23DCA6F000654197 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
 		5721E67323DCA7CA00654197 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
-		5741F8E723DCB99F00DAA13A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		5741F8EA23DCB9D100DAA13A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		5741F8E723DCB99F00DAA13A /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		5741F8ED23DCC66C00DAA13A /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
 		577FD91123DE6FF2000A46B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		577FD91323DE7037000A46B2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -271,18 +269,9 @@
 		5741F8E623DCB96900DAA13A /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				5741F8E923DCB9C400DAA13A /* View */,
-				5741F8E723DCB99F00DAA13A /* MainViewController.swift */,
+				5741F8E723DCB99F00DAA13A /* MainTableViewController.swift */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		5741F8E923DCB9C400DAA13A /* View */ = {
-			isa = PBXGroup;
-			children = (
-				5741F8EA23DCB9D100DAA13A /* MainView.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		577FD90D23DE6F4E000A46B2 /* Localization */ = {
@@ -425,8 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5721E66423DCA28D00654197 /* LayoutConstants.swift in Sources */,
-				5741F8EB23DCB9D100DAA13A /* MainView.swift in Sources */,
-				5741F8E823DCB99F00DAA13A /* MainViewController.swift in Sources */,
+				5741F8E823DCB99F00DAA13A /* MainTableViewController.swift in Sources */,
 				5721E64C23DC750A00654197 /* SplashScreenView.swift in Sources */,
 				5721E65123DC756800654197 /* SFViewController.swift in Sources */,
 				5721E65E23DC86A300654197 /* Utilities.swift in Sources */,

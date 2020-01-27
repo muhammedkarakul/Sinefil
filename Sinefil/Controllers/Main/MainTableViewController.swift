@@ -8,19 +8,9 @@
 
 import UIKit
 
-final class MainViewController: SFViewController {
-    private lazy var mainView: MainView = {
-        let view = MainView()
-        return view
-    }()
-    
+final class MainTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
-    }
-    
-    override func configureApperance() {
-        super.configureApperance()
-        view = mainView
     }
 }
