@@ -25,15 +25,23 @@ final class SplashScreenView: SFView {
     override func prepareLayout() {
         super.prepareLayout()
         
+        setupWelcomeLabelLayout()
+        setupLoadingActivityIndicatorViewLayout()
+        
+    }
+    
+    private func setupWelcomeLabelLayout() {
         addSubview(welcomeLabel)
         welcomeLabel.snp.makeConstraints { maker in
             maker.center.equalToSuperview()
         }
-        
+    }
+    
+    private func setupLoadingActivityIndicatorViewLayout() {
         addSubview(loadingActivityIndicatorView)
         loadingActivityIndicatorView.snp.makeConstraints { maker in
             maker.centerX.equalToSuperview()
-            maker.top.equalTo(welcomeLabel.snp.bottom).offset(32.0)
+            maker.top.equalTo(welcomeLabel.snp.bottom).offset(LayoutConstants.loadingActivityIndicatorTopOffset)
         }
     }
 }

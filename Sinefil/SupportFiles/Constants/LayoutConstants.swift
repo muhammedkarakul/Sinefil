@@ -6,8 +6,9 @@
 //  Copyright © 2020 Muhammed KARAKUL. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct LayoutConstants {
-    
+    // MARK: - SplashScreenView
+    static let loadingActivityIndicatorTopOffset: CGFloat = 32.0
 }
