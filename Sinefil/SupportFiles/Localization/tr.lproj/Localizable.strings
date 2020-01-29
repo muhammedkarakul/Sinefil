@@ -8,3 +8,5 @@
 
 // MARK: - MainTableViewController
 "search_bar_placeholder" = "Film ara";
+"background_view_search_movie" = "Bir film, dizi veya ünlü ara.";
+"background_view_no_result_found" = "Hiçbir sonuç bulunamadı!";

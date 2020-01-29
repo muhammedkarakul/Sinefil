@@ -11,17 +11,16 @@ import UIKit
 final class BackgroundView: SFView {
     private(set) lazy var centeredImageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
     private(set) lazy var messageLabel: UILabel = {
         let label = UILabel()
         label.font = Font.QuickSand.SemiBold.title
-        if #available(iOS 13.0, *) {
-            label.textColor = .systemGray3
-        } else {
-            label.textColor = .lightGray
-        }
+        label.textColor = .gray
+        label.numberOfLines = 0
+        label.textAlignment = .center
         return label
     }()
     
@@ -37,7 +36,9 @@ final class BackgroundView: SFView {
         addSubview(messageLabel)
         messageLabel.snp.makeConstraints { maker in
             maker.centerX.equalToSuperview()
-            maker.top.equalTo(centeredImageView.snp.bottom).offset(32.0)
+            maker.leading.equalTo(16.0)
+            maker.trailing.equalTo(-16.0)
+            maker.bottom.equalTo(centeredImageView.snp.top).offset(-32.0)
         }
     }
 }

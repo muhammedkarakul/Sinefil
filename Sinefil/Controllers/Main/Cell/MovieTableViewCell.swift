@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class MovieTableViewCell: UITableViewCell {
+final class MovieTableViewCell: SFTableViewCell {
     private(set) lazy var posterImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
@@ -21,21 +21,13 @@ final class MovieTableViewCell: UITableViewCell {
         return label
     }()
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        configureApperance()
-        prepareLayout()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    private func configureApperance() {
+    override func configureAppearance() {
+        super.configureAppearance()
         accessoryType = .disclosureIndicator
     }
     
-    private func prepareLayout() {
+    override func prepareLayout() {
+        super.prepareLayout()
         setupPosterImageViewLayout()
         setupTitleLabelLayout()
     }
