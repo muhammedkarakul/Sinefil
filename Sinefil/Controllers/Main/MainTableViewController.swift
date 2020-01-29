@@ -58,6 +58,84 @@ final class MainTableViewController: SFTableViewController {
         tableView.register(MovieTableViewCell.self, forCellReuseIdentifier: "movieCell")
     }
     
+    private func updateView() -> Int {
+        if movies.isEmpty {
+            updateBackgroundView()
+            tableView.backgroundView  = backgroundView
+            tableView.separatorStyle  = .none
+            return .zero
+        } else {
+            tableView.backgroundView = nil
+            tableView.separatorStyle  = .singleLine
+            return sectionNumber
+        }
+    }
+    
+    private func updateBackgroundView() {
+        if isFirstAppear {
+            backgroundView.centeredImageView.image = UIImage(named: "icon_movie_search")
+            backgroundView.messageLabel.text = NSLocalizedString("background_view_search_movie", comment: "Initial background view title.")
+        } else {
+            backgroundView.centeredImageView.image = UIImage(named: "icon_movie_notfound")
+            backgroundView.messageLabel.text = NSLocalizedString("background_view_no_result_found", comment: "No response movie search error title.")
+        }
+    }
+    
+    private func searchMovie(byName name: String) {
+        guard
+            let baseURL = ApiConstants.baseURL,
+            let apiKey = ApiConstants.apiKey
+        else {
+            return
+        }
+        
+        let spacelessName = name.replacingOccurrences(of: " ", with: "+", options: .literal, range: nil)
+        let url = "\(baseURL)/?apikey=\(apiKey)&s=\(spacelessName)"
+        
+        ProgressHUD.show()
+        Alamofire.request(url).responseJSON { response in
+            ProgressHUD.dismiss()
+            if let error = response.error {
+                print("Error: \(error.localizedDescription)")
+                return
+            }
+            self.movies = []
+            guard let data = response.data else { return }
+            do {
+                let searchData = try JSONDecoder().decode(Search.self, from: data)
+                self.movies = searchData.search
+            } catch let err {
+                print("Err", err)
+            }
+        }
+    }
+}
+
+// MARK: - UISearchBarDelegate
+extension MainTableViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        isFirstAppear = false
+        guard let searchText = searchBar.text else { return }
+        searchMovie(byName: searchText)
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension MainTableViewController {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return LayoutConstants.tableViewCellHeight
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let movieDetailTableViewController = MovieDetailTableViewController()
+        movieDetailTableViewController.movie = movies[indexPath.row]
+        navigationController?.pushViewController(movieDetailTableViewController, animated: true)
+    }
+}
+
+// MARK: - UITableViewDataSource
+extension MainTableViewController {
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return updateView()
     }
@@ -80,73 +158,5 @@ final class MainTableViewController: SFTableViewController {
         cell.posterImageView.kf.setImage(with: posterURL)
         cell.titleLabel.text = "\(title)(\(year))"
         return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return LayoutConstants.tableViewCellHeight
-    }
-    
-    private func updateView() -> Int {
-        if movies.isEmpty {
-            updateBackgroundView()
-            
-            tableView.backgroundView  = backgroundView
-            tableView.separatorStyle  = .none
-            return .zero
-        } else {
-            tableView.backgroundView = nil
-            tableView.separatorStyle  = .singleLine
-            return sectionNumber
-        }
-    }
-    
-    private func updateBackgroundView() {
-        if isFirstAppear {
-            backgroundView.centeredImageView.image = UIImage(named: "icon_movie_search")
-            backgroundView.messageLabel.text = NSLocalizedString("background_view_search_movie", comment: "Initial background view title.")
-        } else {
-            backgroundView.centeredImageView.image = UIImage(named: "icon_movie_notfound")
-            backgroundView.messageLabel.text = NSLocalizedString("background_view_no_movie_found", comment: "No response movie search error title.")
-        }
-    }
-    
-    private func searchMovie(byName name: String) {
-        guard
-            let baseURL = ApiConstants.baseURL,
-            let apiKey = ApiConstants.apiKey
-        else {
-            return
-        }
-        
-        let spacelessName = name.replacingOccurrences(of: " ", with: "+", options: .literal, range: nil)
-        
-        let url = "\(baseURL)/?apikey=\(apiKey)&s=\(spacelessName)"
-        
-        ProgressHUD.show()
-        Alamofire.request(url).responseJSON { response in
-            ProgressHUD.dismiss()
-            if let error = response.error {
-                print("Error: \(error.localizedDescription)")
-                return
-            }
-            self.movies = []
-            guard let data = response.data else { return }
-               do {
-                    let searchData = try JSONDecoder().decode(Search.self, from: data)
-                
-                self.movies = searchData.search
-                
-               } catch let err {
-                    print("Err", err)
-               }
-        }
-    }
-}
-
-extension MainTableViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        isFirstAppear = false
-        guard let searchText = searchBar.text else { return }
-        searchMovie(byName: searchText)
     }
 }
