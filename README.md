@@ -11,4 +11,4 @@ A basic film database mobile application like imdb.
 
 ### Preview
 
-![](https://gfycat.com/ifr/ScaredDearKitten)
+<img src="https://gfycat.com/ifr/ScaredDearKitten"
