@@ -75,6 +75,7 @@
 		5721E66B23DCA6F000654197 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
 		5721E66C23DCA6F000654197 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
 		5721E67323DCA7CA00654197 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		5740F29823E1B9B400D789E6 /* Sinefil.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sinefil.entitlements; sourceTree = "<group>"; };
 		5741F8E723DCB99F00DAA13A /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		5741F8ED23DCC66C00DAA13A /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
 		577FD91123DE6FF2000A46B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -164,6 +165,7 @@
 		5721E63023DC729E00654197 /* Sinefil */ = {
 			isa = PBXGroup;
 			children = (
+				5740F29823E1B9B400D789E6 /* Sinefil.entitlements */,
 				5721E64823DC72E500654197 /* SupportFiles */,
 				5721E64723DC72DC00654197 /* Models */,
 				5721E64623DC72D700654197 /* Controllers */,
@@ -652,6 +654,8 @@
 			baseConfigurationReference = 3D704B5B68C6283E6FD9A598 /* Pods-Sinefil.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sinefil/Sinefil.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P3PB4F7F3W;
 				INFOPLIST_FILE = "$(SRCROOT)/Sinefil/SupportFiles/PropertyLists/Info.plist";
@@ -662,6 +666,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.muhammedtayyibkarakul.Sinefil;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -672,6 +677,8 @@
 			baseConfigurationReference = CC74BB6494A91EA127F47033 /* Pods-Sinefil.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sinefil/Sinefil.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P3PB4F7F3W;
 				INFOPLIST_FILE = "$(SRCROOT)/Sinefil/SupportFiles/PropertyLists/Info.plist";
@@ -682,6 +689,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.muhammedtayyibkarakul.Sinefil;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -9,10 +9,17 @@ target 'Sinefil' do
   use_frameworks!
 
   # Pods for Sinefil
+
+  # UI and Layout
   pod 'SnapKit'
+  pod 'ProgressHUD'
+
+  # Firebase
   pod 'Firebase'
   pod 'Firebase/RemoteConfig'
+  pod 'Firebase/Analytics'
+
+  # Networking
   pod 'Alamofire'
   pod 'Kingfisher'
-  pod 'ProgressHUD'
 end
