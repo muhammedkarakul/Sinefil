@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import ProgressHUD
 import Kingfisher
+import Firebase
 
 final class MovieDetailTableViewController: SFTableViewController {
     internal var movie: Movie?
@@ -68,6 +69,9 @@ final class MovieDetailTableViewController: SFTableViewController {
                 self.movieDetail = movieDetailData
                 
                 guard let movieDetailDict = self.movieDetail?.getDictionary() else { return }
+                
+                Analytics.logEvent("movie_detail", parameters: movieDetailDict as [String : Any])
+                
                 for (key, value) in movieDetailDict {
                     let section = Section(name: key, data: value)
                     self.sections.append(section)
