@@ -10,3 +10,24 @@
 "search_bar_placeholder" = "Movies, shows and celebs";
 "background_view_search_movie" = "Search a movie, tv show or celeb.";
 "background_view_no_result_found" = "No result found!";
+
+// MARK: - MovieDetailViewController
+"year" = "Year";
+"rated" = "Rated";
+"relased" = "Relased";
+"runtime" = "Runtime";
+"genre" = "Genre";
+"director" = "Director";
+"writer" = "Writer";
+"actors" = "Actors";
+"plot" = "Plot";
+"language" = "Language";
+"country" = "Country";
+"awards" = "Awards";
+"metascore" = "Metascore";
+"imdb_rating" = "IMDB Rating";
+"imdb_votes" = "IMDB Votes";
+"type" = "Type";
+"box_office" = "Box Office";
+"production" = "Production";
+"website" = "Website";

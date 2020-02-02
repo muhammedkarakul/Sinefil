@@ -10,3 +10,24 @@
 "search_bar_placeholder" = "Film ara";
 "background_view_search_movie" = "Bir film, dizi veya ünlü ara.";
 "background_view_no_result_found" = "Hiçbir sonuç bulunamadı!";
+
+// MARK: - MovieDetailViewController
+"year" = "Yıl";
+"rated" = "Derecelendirme";
+"relased" = "Yayın";
+"runtime" = "Süre";
+"genre" = "Tür";
+"director" = "Yönetmen";
+"writer" = "Yazar";
+"actors" = "Oyuncular";
+"plot" = "Konu";
+"language" = "Dil";
+"country" = "Ülke";
+"awards" = "Ödüller";
+"metascore" = "Metascore";
+"imdb_rating" = "IMDB Değerlendirmesi";
+"imdb_votes" = "IMDB Oyları";
+"type" = "Tip";
+"box_office" = "Gişe";
+"production" = "Yapım";
+"website" = "İnternet Sitesi";
