@@ -7,18 +7,22 @@
 //
 
 import Foundation
-import Alamofire
 
 final class Utilities {
     internal class func isInternetConnectionAvailable(completion: @escaping((Bool) -> Void)) {
-        let url = "https://www.google.com"
-        Alamofire.request(url).responseString { response in
-            if let error = response.error {
+        guard let url = URL(string: "https://www.google.com") else { return }
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let error = error {
                 print("No Internet Connection Found: \(error.localizedDescription)")
-                completion(false)
+                DispatchQueue.main.async {
+                    completion(false)
+                }
             }
-            completion(true)
+            DispatchQueue.main.async {
+                completion(true)
+            }
         }
+        task.resume()
     }
     
     internal class func readDataFromPlist(_ name: String) -> NSDictionary? {

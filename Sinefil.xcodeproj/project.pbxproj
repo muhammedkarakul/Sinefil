@@ -40,7 +40,9 @@
 		577FD91023DE6FF2000A46B2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 577FD91223DE6FF2000A46B2 /* Localizable.strings */; };
 		577FD92123DEFD4A000A46B2 /* SFTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577FD92023DEFD4A000A46B2 /* SFTableViewController.swift */; };
 		577FD92423DF0327000A46B2 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577FD92323DF0327000A46B2 /* BackgroundView.swift */; };
-		9EB41809BF92C37411D7FF25 /* Pods_Sinefil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B9B0B21EDBEDE317A33BC1E /* Pods_Sinefil.framework */; };
+		57BEEF2B24002DC300A7DA5F /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BEEF2A24002DC300A7DA5F /* Network.swift */; };
+		57BEEF2E2400322B00A7DA5F /* UIImageView+downloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BEEF2D2400322B00A7DA5F /* UIImageView+downloadImage.swift */; };
+		D03E13C972B1ACE84D7CB9AC /* Pods_Sinefil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB52F7777689C400627FA62 /* Pods_Sinefil.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,8 +85,10 @@
 		577FD91423DE7037000A46B2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		577FD92023DEFD4A000A46B2 /* SFTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFTableViewController.swift; sourceTree = "<group>"; };
 		577FD92323DF0327000A46B2 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
-		9B9B0B21EDBEDE317A33BC1E /* Pods_Sinefil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sinefil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57BEEF2A24002DC300A7DA5F /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		57BEEF2D2400322B00A7DA5F /* UIImageView+downloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+downloadImage.swift"; sourceTree = "<group>"; };
 		CC74BB6494A91EA127F47033 /* Pods-Sinefil.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sinefil.release.xcconfig"; path = "Target Support Files/Pods-Sinefil/Pods-Sinefil.release.xcconfig"; sourceTree = "<group>"; };
+		FAB52F7777689C400627FA62 /* Pods_Sinefil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sinefil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EB41809BF92C37411D7FF25 /* Pods_Sinefil.framework in Frameworks */,
+				D03E13C972B1ACE84D7CB9AC /* Pods_Sinefil.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +208,7 @@
 		5721E64823DC72E500654197 /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				57BEEF2C240031DA00A7DA5F /* Extensions */,
 				577FD90D23DE6F4E000A46B2 /* Localization */,
 				5721E66723DCA6C100654197 /* Fonts */,
 				5721E65B23DC866E00654197 /* Utilities */,
@@ -302,6 +307,7 @@
 				5721E67323DCA7CA00654197 /* Font.swift */,
 				5721E65D23DC86A300654197 /* Utilities.swift */,
 				5721E65F23DC944A00654197 /* Alert.swift */,
+				57BEEF2A24002DC300A7DA5F /* Network.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -352,10 +358,18 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		57BEEF2C240031DA00A7DA5F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				57BEEF2D2400322B00A7DA5F /* UIImageView+downloadImage.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		7562EBCE2DD8AA3D215370A3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9B9B0B21EDBEDE317A33BC1E /* Pods_Sinefil.framework */,
+				FAB52F7777689C400627FA62 /* Pods_Sinefil.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -371,7 +385,7 @@
 				5721E62A23DC729E00654197 /* Sources */,
 				5721E62B23DC729E00654197 /* Frameworks */,
 				5721E62C23DC729E00654197 /* Resources */,
-				19D74FF2082BFDA950D3D7E3 /* [CP] Embed Pods Frameworks */,
+				50F6EFE81BAC77A063C036D7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -438,7 +452,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		19D74FF2082BFDA950D3D7E3 /* [CP] Embed Pods Frameworks */ = {
+		50F6EFE81BAC77A063C036D7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -496,6 +510,7 @@
 				5721E67423DCA7CA00654197 /* Font.swift in Sources */,
 				577FD92123DEFD4A000A46B2 /* SFTableViewController.swift in Sources */,
 				5721E63623DC729E00654197 /* SplashScreenViewController.swift in Sources */,
+				57BEEF2E2400322B00A7DA5F /* UIImageView+downloadImage.swift in Sources */,
 				571EF55E23E0BE2F006E678A /* SFTableViewCell.swift in Sources */,
 				5721E65323DC76D400654197 /* SFView.swift in Sources */,
 				5721E63223DC729E00654197 /* AppDelegate.swift in Sources */,
@@ -506,6 +521,7 @@
 				577FD92423DF0327000A46B2 /* BackgroundView.swift in Sources */,
 				5721E65A23DC81D100654197 /* ApiConstants.swift in Sources */,
 				571EF56023E0C12E006E678A /* MovieDetail.swift in Sources */,
+				57BEEF2B24002DC300A7DA5F /* Network.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

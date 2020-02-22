@@ -28,4 +28,11 @@ struct LayoutConstants {
     // MARK: - MainTableViewController
     //tableView
     static let tableViewCellHeight: CGFloat = 100.0
+    
+    // MARK: - BackgroundView
+    static let centeredImageViewSize: CGFloat = 240.0
+    static let messageLabelLeading: CGFloat = 16.0
+    static let messageLabelTrailing: CGFloat = -16.0
+    static let messageLabelBottomOffset: CGFloat = -32.0
+    
 }

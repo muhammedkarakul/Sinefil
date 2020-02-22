@@ -7,20 +7,13 @@
 //
 
 import UIKit
-import Alamofire
-import Kingfisher
 import ProgressHUD
 
 final class MainTableViewController: SFTableViewController {
     private var isFirstAppear = true
     private let sectionNumber = 1
     
-    private var movies: Array<Movie> = [] {
-        didSet {
-            _ = updateView()
-            tableView.reloadData()
-        }
-    }
+    private var movies: Array<Movie> = []
     
     private lazy var backgroundView: BackgroundView = {
         let view = BackgroundView()
@@ -90,24 +83,28 @@ final class MainTableViewController: SFTableViewController {
         }
         
         let spacelessName = name.replacingOccurrences(of: " ", with: "+", options: .literal, range: nil)
-        let url = "\(baseURL)/?apikey=\(apiKey)&s=\(spacelessName)"
+        guard let url = URL(string: "\(baseURL)/?apikey=\(apiKey)&s=\(spacelessName)") else { return }
         
         ProgressHUD.show()
-        Alamofire.request(url).responseJSON { response in
-            ProgressHUD.dismiss()
-            if let error = response.error {
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let error = error {
                 print("Error: \(error.localizedDescription)")
                 return
             }
             self.movies = []
-            guard let data = response.data else { return }
-            do {
-                let searchData = try JSONDecoder().decode(Search.self, from: data)
-                self.movies = searchData.search
-            } catch let err {
-                print("Err", err)
+            guard let data = data else { return }
+            DispatchQueue.main.async {
+                do {
+                    let searchData = try JSONDecoder().decode(Search.self, from: data)
+                    self.movies = searchData.search
+                    self.tableView.reloadData()
+                    ProgressHUD.dismiss()
+                } catch let err {
+                    print("Err", err)
+                }
             }
         }
+        task.resume()
     }
 }
 
@@ -154,9 +151,11 @@ extension MainTableViewController {
         else {
             return cell
         }
-        let posterURL = URL(string: poster)
-        cell.posterImageView.kf.setImage(with: posterURL)
+        
         cell.titleLabel.text = "\(title)(\(year))"
+        
+        guard let posterURL = URL(string: poster) else { return cell }
+        cell.posterImageView.downloadImage(from: posterURL)
         return cell
     }
 }

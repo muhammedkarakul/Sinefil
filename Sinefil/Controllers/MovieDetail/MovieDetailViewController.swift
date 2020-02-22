@@ -7,18 +7,13 @@
 //
 
 import UIKit
-import Alamofire
 import ProgressHUD
-import Kingfisher
 import Firebase
 
 final class MovieDetailTableViewController: SFTableViewController {
     internal var movie: Movie?
-    private var movieDetail: MovieDetail? {
-        didSet {
-            tableView.reloadData()
-        }
-    }
+    private var movieDetail: MovieDetail?
+    
     private struct Section {
         var name: String?
         var data: String?
@@ -53,17 +48,16 @@ final class MovieDetailTableViewController: SFTableViewController {
             return
         }
         
-        let url = "\(baseURL)/?apikey=\(apiKey)&i=\(imdbID)"
+        guard let url = URL(string: "\(baseURL)/?apikey=\(apiKey)&i=\(imdbID)") else { return }
         
         ProgressHUD.show()
-        Alamofire.request(url).responseJSON { response in
-            ProgressHUD.dismiss()
-            if let error = response.error {
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let error = error {
                 print("Error: \(error.localizedDescription)")
                 return
             }
             
-            guard let data = response.data else { return }
+            guard let data = data else { return }
             do {
                 let movieDetailData = try JSONDecoder().decode(MovieDetail.self, from: data)
                 self.movieDetail = movieDetailData
@@ -76,12 +70,16 @@ final class MovieDetailTableViewController: SFTableViewController {
                     let section = Section(name: key, data: value)
                     self.sections.append(section)
                 }
-                self.tableView.reloadData()
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    ProgressHUD.dismiss()
+                }
                 
             } catch let err {
                 print("Err", err)
             }
         }
+        task.resume()
     }
 }
 
@@ -100,8 +98,8 @@ extension MovieDetailTableViewController {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "posterCell", for: indexPath) as! MoviePosterTableViewCell
             guard let poster = movieDetail?.poster else { return cell }
-            let posterURL = URL(string: poster)
-            cell.posterImageView.kf.setImage(with: posterURL)
+            guard let posterURL = URL(string: poster) else { return cell }
+            cell.posterImageView.downloadImage(from: posterURL)
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "defaultCell", for: indexPath)

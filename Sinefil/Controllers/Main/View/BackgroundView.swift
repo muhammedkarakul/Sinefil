@@ -30,15 +30,15 @@ final class BackgroundView: SFView {
         addSubview(centeredImageView)
         centeredImageView.snp.makeConstraints { maker in
             maker.center.equalToSuperview()
-            maker.width.height.equalTo(240.0)
+            maker.width.height.equalTo(LayoutConstants.centeredImageViewSize)
         }
         
         addSubview(messageLabel)
         messageLabel.snp.makeConstraints { maker in
             maker.centerX.equalToSuperview()
-            maker.leading.equalTo(16.0)
-            maker.trailing.equalTo(-16.0)
-            maker.bottom.equalTo(centeredImageView.snp.top).offset(-32.0)
+            maker.leading.equalTo(LayoutConstants.messageLabelLeading)
+            maker.trailing.equalTo(LayoutConstants.messageLabelTrailing)
+            maker.bottom.equalTo(centeredImageView.snp.top).offset(LayoutConstants.messageLabelBottomOffset)
         }
     }
 }

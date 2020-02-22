@@ -10,7 +10,7 @@ target 'Sinefil' do
 
   # Pods for Sinefil
 
-  # UI and Layout
+  # UI and Layout
   pod 'SnapKit'
   pod 'ProgressHUD'
 
@@ -18,8 +18,4 @@ target 'Sinefil' do
   pod 'Firebase'
   pod 'Firebase/RemoteConfig'
   pod 'Firebase/Analytics'
-
-  # Networking
-  pod 'Alamofire'
-  pod 'Kingfisher'
 end
