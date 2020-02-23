@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -42,7 +42,7 @@
 		577FD92423DF0327000A46B2 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577FD92323DF0327000A46B2 /* BackgroundView.swift */; };
 		57BEEF2B24002DC300A7DA5F /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BEEF2A24002DC300A7DA5F /* Network.swift */; };
 		57BEEF2E2400322B00A7DA5F /* UIImageView+downloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BEEF2D2400322B00A7DA5F /* UIImageView+downloadImage.swift */; };
-		D03E13C972B1ACE84D7CB9AC /* Pods_Sinefil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB52F7777689C400627FA62 /* Pods_Sinefil.framework */; };
+		B78349E0F896E3B95BA40634 /* libPods-Sinefil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EF285D154AD8E432F0939D /* libPods-Sinefil.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,7 +88,7 @@
 		57BEEF2A24002DC300A7DA5F /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		57BEEF2D2400322B00A7DA5F /* UIImageView+downloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+downloadImage.swift"; sourceTree = "<group>"; };
 		CC74BB6494A91EA127F47033 /* Pods-Sinefil.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sinefil.release.xcconfig"; path = "Target Support Files/Pods-Sinefil/Pods-Sinefil.release.xcconfig"; sourceTree = "<group>"; };
-		FAB52F7777689C400627FA62 /* Pods_Sinefil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sinefil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4EF285D154AD8E432F0939D /* libPods-Sinefil.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sinefil.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D03E13C972B1ACE84D7CB9AC /* Pods_Sinefil.framework in Frameworks */,
+				B78349E0F896E3B95BA40634 /* libPods-Sinefil.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,7 +369,7 @@
 		7562EBCE2DD8AA3D215370A3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FAB52F7777689C400627FA62 /* Pods_Sinefil.framework */,
+				F4EF285D154AD8E432F0939D /* libPods-Sinefil.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -385,7 +385,6 @@
 				5721E62A23DC729E00654197 /* Sources */,
 				5721E62B23DC729E00654197 /* Frameworks */,
 				5721E62C23DC729E00654197 /* Resources */,
-				50F6EFE81BAC77A063C036D7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -452,23 +451,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		50F6EFE81BAC77A063C036D7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Sinefil/Pods-Sinefil-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Sinefil/Pods-Sinefil-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sinefil/Pods-Sinefil-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		D920AF13949881C699630874 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

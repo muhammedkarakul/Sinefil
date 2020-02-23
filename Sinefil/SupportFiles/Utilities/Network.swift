@@ -9,7 +9,14 @@
 import Foundation
 
 class Network {
-    class func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
-        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
+    class func getData(from url: URL, completion: @escaping (Data) -> ()) {
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+                return
+            }
+            guard let data = data else { return }
+            completion(data)
+        }.resume()
     }
 }

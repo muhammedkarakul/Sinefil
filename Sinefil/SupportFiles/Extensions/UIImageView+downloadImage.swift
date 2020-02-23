@@ -10,12 +10,7 @@ import UIKit
 
 extension UIImageView {
     func downloadImage(from url: URL) {
-        Network.getData(from: url) { (data, response, error) in
-            if let error = error {
-                print("Error: \(error.localizedDescription)")
-                return
-            }
-            guard let data = data else { return }
+        Network.getData(from: url) { data in
             DispatchQueue.main.async {
                 self.image = UIImage(data: data)
             }

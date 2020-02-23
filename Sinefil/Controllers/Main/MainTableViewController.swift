@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ProgressHUD
 
 final class MainTableViewController: SFTableViewController {
     private var isFirstAppear = true
@@ -85,32 +84,27 @@ final class MainTableViewController: SFTableViewController {
         let spacelessName = name.replacingOccurrences(of: " ", with: "+", options: .literal, range: nil)
         guard let url = URL(string: "\(baseURL)/?apikey=\(apiKey)&s=\(spacelessName)") else { return }
         
-        ProgressHUD.show()
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if let error = error {
-                print("Error: \(error.localizedDescription)")
-                return
-            }
+        startNetworkActivityIndicator()
+        Network.getData(from: url) { data in
             self.movies = []
-            guard let data = data else { return }
+            do {
+                let searchData = try JSONDecoder().decode(Search.self, from: data)
+                self.movies = searchData.search
+            } catch let err {
+                print("Err", err)
+            }
             DispatchQueue.main.async {
-                do {
-                    let searchData = try JSONDecoder().decode(Search.self, from: data)
-                    self.movies = searchData.search
-                    self.tableView.reloadData()
-                    ProgressHUD.dismiss()
-                } catch let err {
-                    print("Err", err)
-                }
+                self.tableView.reloadData()
+                self.stopNetworkActivityIndicator()
             }
         }
-        task.resume()
     }
 }
 
 // MARK: - UISearchBarDelegate
 extension MainTableViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        tableView.setContentOffset(.zero, animated: true)
         isFirstAppear = false
         guard let searchText = searchBar.text else { return }
         searchMovie(byName: searchText)
